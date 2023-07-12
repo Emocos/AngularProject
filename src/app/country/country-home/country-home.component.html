@@ -1,4 +1,6 @@
-<app-country-search/>
-<app-country-info
+<app-country-search
   (outputCountryInfo) = 'getCountry($event)'
+/>
+<app-country-info
+ [countryInfo]="countryInfo"
 />

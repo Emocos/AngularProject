@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {ApiService} from "../../api.service";
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-country-info',
@@ -7,6 +6,5 @@ import {ApiService} from "../../api.service";
   styleUrls: ['./country-info.component.css']
 })
 export class CountryInfoComponent {
-
-
+  @Input() countryInfo: any
 }

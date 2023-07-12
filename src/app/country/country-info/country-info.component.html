@@ -1,1 +1,19 @@
-
+<div class="ui segment" *ngIf="countryInfo.name" style="margin-top: 50px;">
+  <h1 class="ui center aligned header">{{countryInfo.name.official}}</h1>
+  <div class="ui images centered">
+    <img class="ui medium image" src="{{countryInfo.flags.svg}}">
+    <img class="ui small circular image" src="{{countryInfo.coatOfArms.svg}}">
+  </div>
+  <ol class="ui list" style="margin-top: 25px;">
+    <li value="*">Area: {{countryInfo.area | number: '.2'}} km</li>
+    <li value="*">Population: {{countryInfo.population | number: '2.'}} people</li>
+    <li value="*">Continent: {{countryInfo.continents}}</li>
+    <li value="*">Subregion: {{countryInfo.subregion}}</li>
+    <li value="*">Independent Status: {{countryInfo.independent}}</li>
+    <li value="*">Capital: {{countryInfo.capital}}</li>
+    <li value="*">Languages: <span *ngFor="let item of countryInfo.languages | keyvalue">{{item.value}} </span></li>
+    <li value="*" *ngFor="let item of countryInfo.currencies | keyvalue">
+      Currencies: {{item.key}}
+    </li>
+  </ol>
+</div>

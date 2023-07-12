@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./country-home.component.css']
 })
 export class CountryHomeComponent {
-  countryName: any
+  countryInfo: any = []
 
   getCountry(data: any) {
-    this.countryName = data
+    this.countryInfo = data
   }
 }
