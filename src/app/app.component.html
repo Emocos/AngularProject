@@ -1,2 +1,26 @@
-<a routerLink="rovers">Rovers</a>
-<router-outlet/>
+<header class="ui secondary pointing menu">
+  <a class="item active" routerLink="/">
+    <i class="code icon large" style="visibility: visible;"></i>
+  </a>
+  <div class="item"></div>
+  <a class="item" routerLink="rovers" routerLinkActive="active">
+    Rovers
+  </a>
+  <a class="item" routerLinkActive="active" routerLink="country">
+    Country
+  </a>
+  <a class="item" routerLinkActive="active" routerLink="rov123ers">
+    Friends
+  </a>
+</header>
+
+<div class="wrapper">
+  <main class="ui segment">
+    <router-outlet/>
+  </main>
+
+  <footer>
+    <h3>Created by Socome𓅓</h3>
+  </footer>
+</div>
+

@@ -1,3 +1,17 @@
-<p>rovers works!</p>
-
-
+<div class="ui cards">
+  <div class="ui centered card" *ngFor="let rover of rovers">
+    <div class="image" style="height: 230px;">
+      <img src='./assets/{{rover.id}}.jpg' style="height: 100%">
+    </div>
+    <div class="content">
+      <span class="header">{{rover.name}}</span>
+      <div class="meta">
+        <span class="date">Launch date: {{rover.launch_date | date}}</span><br>
+        <span class="date">Landing date: {{rover.landing_date | date}}</span>
+      </div>
+      <div class="description">
+        Status: {{rover.status}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<app-rovers
+  [rovers]="rovers"
+/>
+<br>
+<app-search-form
+  (outputDate)="getRoverDate($event)"
+  (outputRover)="getRoverName($event)"
+/>
+<app-rovers-photo
+  [photos]="photos"
+/>

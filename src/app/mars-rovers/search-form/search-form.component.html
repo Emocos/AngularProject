@@ -1,0 +1,21 @@
+<div class="ui container center aligned">
+  <h1>Find by Rover Name and Date</h1>
+  <form (submit)="test()">
+    <select class="ui selection dropdown centered" style="height: max-content; margin-right: 10px" [(ngModel)]="selectedRover" name="rover">
+      <option>Curiosity</option>
+      <option>Spirit</option>
+      <option>Opportunity</option>
+      <option>Perseverance</option>
+    </select>
+    <div class="ui input">
+      <input type="date" style="height: 43px" [(ngModel)]="selectedDate" name="date">
+    </div>
+    <button class="circular ui icon button" style="margin-left: 10px;">
+      <i class="search icon"></i>
+    </button>
+  </form>
+</div>
+
+<div class="ui container center aligned" *ngIf="selectedRover === 'Rover'" style="margin-top: 100px;">
+  <h1><i class="arrow up icon"></i>  Choose the Rover</h1>
+</div>

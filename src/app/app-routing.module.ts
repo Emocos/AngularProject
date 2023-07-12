@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {RoversComponent} from "./mars-rovers/rovers/rovers.component";
+import {WelcomeComponentComponent} from "./welcome/welcome-component.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
 
 const routes: Routes = [
-  {path: 'rovers', component: RoversComponent}
+  {path: '', component: WelcomeComponentComponent},
+  { path: '**', component: NotFoundComponent},
 ];
 
 @NgModule({
