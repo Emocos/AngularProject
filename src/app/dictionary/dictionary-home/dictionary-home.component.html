@@ -1,0 +1,16 @@
+<div class="ui center aligned container" >
+  <form action="" (submit)="getMeaning()">
+    <div class="ui fluid icon input">
+      <input type="text" placeholder="Search..." [(ngModel)]="inputWord" name="word">
+      <i class="search icon"></i>
+    </div>
+  </form>
+  <div *ngIf="wordInfo" style="margin-top: 50px;">
+    <h1>Searched Word: &#171;{{wordInfo.word.toUpperCase()}}&#187;</h1><br>
+    <div class="ui left aligned container">
+      <h2>Meaning: <i>{{wordInfo.meanings[0].definitions[0].definition}}</i></h2>
+      <h2>Example: <i>{{wordInfo.meanings[0].definitions[0].example}}</i></h2>
+    </div>
+    <p></p>
+  </div>
+</div>

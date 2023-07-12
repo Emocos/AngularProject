@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {ApiService} from "../../api.service";
 import {catchError} from "rxjs";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-country-search',
@@ -17,17 +18,15 @@ export class CountrySearchComponent {
   }
 
   getCountryInfo() {
-    try {
-      if (this.countryName.length) {
-        this.getCountry.getCountry(this.countryName).subscribe((response: any) => {
+    if (this.countryName.length) {
+      this.getCountry.getCountry(this.countryName).subscribe((response: any) => {
           this.countryInfo = response[0];
-          console.log(this.countryInfo)
           this.outputCountryInfo.emit(this.countryInfo)
           this.countryName = ''
-        })
-      }
-    } catch (e:any) {
-      console.log(e)
+        }, (error: HttpErrorResponse) => {
+          alert(`Country not found!`)
+        }
+      )
     }
   }
 }
