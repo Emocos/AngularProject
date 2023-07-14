@@ -1,8 +1,8 @@
 <div class="ui container center aligned">
-  <form class="ui action input" (submit)="getCountryInfo()">
-    <input type="text" placeholder="Country..." [(ngModel)]="countryName" name="country">
-    <button class="ui icon button">
+  <form (submit)="getCountryInfo()">
+    <div class="ui fluid icon input">
+      <input type="text" placeholder="Country..." [(ngModel)]="countryName" name="country">
       <i class="search icon"></i>
-    </button>
+    </div>
   </form>
 </div>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {ApiService} from "../../api.service";
+import * as jspdf from "jspdf";
+import jsPDF from "jspdf";
 
 @Component({
   selector: 'app-joke-home',
@@ -18,4 +20,9 @@ export class JokeHomeComponent {
       this.joke = response[0].joke
     })
 }
+  saveJoke() {
+    const doc = new jsPDF()
+    doc.text(this.joke, 10, 10)
+    doc.save(`joke.pdf`)
+  }
 }
