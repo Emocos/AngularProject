@@ -1,5 +1,7 @@
 <div class="ui center aligned container" style="margin-top: 18%;">
-  <h1 *ngIf="joke" id="joke">&#8220;<a download="joke">{{joke}}</a>&#8222;</h1>
+  <h1 *ngIf="joke" id="joke" style="cursor: pointer">
+    &#8220;<a (click)="saveJoke()">{{joke}}</a>&#8222;
+  </h1>
   <button (click)="getJoke()" class="massive ui button">
     <span *ngIf="!joke">Give Me A JOKE!</span>
     <span *ngIf="joke">I said give ME FUNNY JOKE!</span>
