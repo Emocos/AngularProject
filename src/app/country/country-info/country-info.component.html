@@ -4,16 +4,18 @@
     <img class="ui medium image" src="{{countryInfo.flags.svg}}">
     <img class="ui small image" src="{{countryInfo.coatOfArms.svg}}">
   </div>
-  <ol class="ui list" style="margin-top: 25px;">
-    <li value="*">Area: {{countryInfo.area | shortNumber}} km</li>
-    <li value="*">Population: {{countryInfo.population | shortNumber}} people</li>
-    <li value="*">Continent: {{countryInfo.continents}}</li>
-    <li value="*">Subregion: {{countryInfo.subregion}}</li>
-    <li value="*">Independent Status: {{countryInfo.independent}}</li>
-    <li value="*">Capital: {{countryInfo.capital}}</li>
-    <li value="*">Languages: <span *ngFor="let item of countryInfo.languages | keyvalue">{{item.value}} </span></li>
-    <li value="*" *ngFor="let item of countryInfo.currencies | keyvalue">
-      Currencies: {{item.key}}
-    </li>
-  </ol>
+  <h3 style="display:flex;">
+    <ol class="ui list" style="margin-top: 25px; margin-right: auto; margin-left: auto">
+      <li value="*">Area: {{countryInfo.area | shortNumber}} km</li>
+      <li value="*">Population: {{countryInfo.population | shortNumber}} people</li>
+      <li value="*">Continent: {{countryInfo.continents}}</li>
+      <li value="*">Subregion: {{countryInfo.subregion}}</li>
+      <li value="*">Independent Status: {{countryInfo.independent}}</li>
+      <li value="*">Capital: {{countryInfo.capital}}</li>
+      <li value="*">Languages: <span *ngFor="let item of countryInfo.languages | keyvalue">{{item.value}} </span></li>
+      <li value="*" *ngFor="let item of countryInfo.currencies | keyvalue">
+        Currencies: {{item.key}}
+      </li>
+    </ol>
+  </h3>
 </div>
