@@ -15,7 +15,7 @@ import {DictionaryModule} from "./dictionary/dictionary.module";
   declarations: [
     AppComponent,
     WelcomeComponentComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     MarsRoversModule,

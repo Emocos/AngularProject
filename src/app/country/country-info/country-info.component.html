@@ -5,8 +5,8 @@
     <img class="ui small image" src="{{countryInfo.coatOfArms.svg}}">
   </div>
   <ol class="ui list" style="margin-top: 25px;">
-    <li value="*">Area: {{countryInfo.area | number: '.2'}} km</li>
-    <li value="*">Population: {{countryInfo.population | number: '2.'}} people</li>
+    <li value="*">Area: {{countryInfo.area | shortNumber}} km</li>
+    <li value="*">Population: {{countryInfo.population | shortNumber}} people</li>
     <li value="*">Continent: {{countryInfo.continents}}</li>
     <li value="*">Subregion: {{countryInfo.subregion}}</li>
     <li value="*">Independent Status: {{countryInfo.independent}}</li>
