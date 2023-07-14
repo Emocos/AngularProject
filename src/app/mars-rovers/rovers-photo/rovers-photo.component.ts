@@ -7,4 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class RoversPhotoComponent {
   @Input() photos:any = []
+  @Input() photosLength:any
 }

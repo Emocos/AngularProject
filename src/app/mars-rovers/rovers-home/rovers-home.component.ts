@@ -13,6 +13,7 @@ export class RoversHomeComponent {
     roverDate: ''
   }
   photos:any = []
+  photosLength:any
 
   constructor(private marsRovers: ApiService) {
     this.marsRovers.getAllRovers().subscribe((response: any) => {
@@ -32,6 +33,7 @@ export class RoversHomeComponent {
   getRoverPhoto() {
     this.marsRovers.getInfo({rover: this.rover.roverName, date: this.rover.roverDate}).subscribe((response: any) => {
       response ? this.photos = response.photos : undefined
+      this.photosLength = response.photos.length
       this.photos.length > 21 ? this.photos.length = 20 : this.photos
       !this.photos.length ? alert(`No photo in this Date`) : this.photos
     })

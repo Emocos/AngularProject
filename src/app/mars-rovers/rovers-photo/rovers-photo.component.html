@@ -1,3 +1,4 @@
+<h2 *ngIf="photos.length">Total photos in this Date: {{photosLength}}</h2>
 <div class="ui four cards" *ngIf="photos.length" style="margin-top: 50px;">
   <a class="grey card" *ngFor="let photo of photos">
     <div class="image">

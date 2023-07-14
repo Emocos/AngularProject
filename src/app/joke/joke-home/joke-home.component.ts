@@ -18,4 +18,12 @@ export class JokeHomeComponent {
       this.joke = response[0].joke
     })
 }
+  // saveJoke() {
+  //   let joke = document.getElementById('joke');
+  //   html().from(joke).set({
+  //     filename: 'joke.pdf',
+  //     html2canvas: { scale: 1 },
+  //     jsPDF: {orientation: 'portrait', unit: 'in', format: 'letter', compressPDF: true}
+  //   }).save();
+  // }
 }
